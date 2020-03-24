@@ -48,8 +48,6 @@
     "async": "^3.1.x",
     "jsonld": "^1.8.0",
     "n3": "^1.2.0",
-    "solid-auth-cli": "^1.0.8",
-    "solid-auth-client": "^2.3.0",
     "xmldom": "^0.1.27"
   },
   "devDependencies": {
@@ -84,6 +82,9 @@
     "webpack-cli": "^3.3.6",
     "webpack-dev-server": "^3.8.0",
     "wrapper-webpack-plugin": "^2.1.0"
+  },
+  "peerDependencies": {
+    "solid-auth-client": "^2.3.0"
   },
   "scripts": {
     "build": "babel src --extensions \".ts,.js\" -d lib",
@@ -146,5 +147,8 @@
       "tabulator",
       "WebSocket"
     ]
+  },
+  "react-native": {
+    "solid-auth-cli": "solid-auth-client"
   }
 }

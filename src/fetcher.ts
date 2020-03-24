@@ -976,7 +976,7 @@ export default class Fetcher implements CallbackifyInterface {
     _options,
     timeout: number
   ) {
-    if (_options !== undefined) {
+    if (_options != null) {
       console.warn("_options is deprecated")
     }
     this.timeouts[originalUri] = (this.timeouts[originalUri] || []).concat(setTimeout(() => {
@@ -1657,12 +1657,12 @@ export default class Fetcher implements CallbackifyInterface {
     const kb = this.store
 
     let responseNode = kb.bnode()
-
+    
     kb.add(options.req, this.ns.link('response'), responseNode, responseNode)
     kb.add(responseNode, this.ns.http('status'),
     kb.rdfFactory.literal(response.status as any), responseNode)
     kb.add(responseNode, this.ns.http('statusText'),
-    kb.rdfFactory.literal(response.statusText), responseNode)
+    kb.rdfFactory.literal(response.statusText || 'undefined'), responseNode)
 
     if (!options.resource.value.startsWith('http')) {
       return responseNode
