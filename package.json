@@ -1,5 +1,5 @@
 {
-  "name": "rdflib",
+  "name": "@jasonpaulos/rdflib",
   "description": "an RDF library for node.js. Suitable for client and server side.",
   "version": "1.1.0",
   "engines": {
@@ -39,7 +39,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/linkeddata/rdflib.js.git"
+    "url": "git://github.com/jasonpaulos/rdflib.js.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "homepage": "http://github.com/linkeddata/rdflib.js",
   "bugs": "http://github.com/linkeddata/rdflib.js/issues",
